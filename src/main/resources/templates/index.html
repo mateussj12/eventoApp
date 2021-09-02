@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org" xmlns:layout= "http://www.ultraq.net.nz/thymeleaf/layout" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventosApp</title>
+</head>
+
+<body>
+    <!--Inicio Cabeçalho-->
+    <header>
+        <h3>Lista de Eventos</h3>
+        <a href="/cadastrarEvento">Cadastrar Evento</a>
+    </header>
+    <!--Fim Cabeçalho-->
+
+    <!--Inicio Principal-->
+    <main>
+        <section>
+            <div th:each="evento : ${evento}">
+                <div class="row">
+                    <p><span th:text="${evento.nome}"></span></p>
+                    <p><span th:text="${evento.local}"></span></p>
+                    <p><span th:text="${evento.data}"></span></p>
+                    <p><span th:text="${evento.horario}"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Fim Principal-->
+
+    <!--Inicio Rodapé-->
+    <footer>
+
+    </footer>
+    <!--Fim Rodapé-->
+</body>
+
+</html>
